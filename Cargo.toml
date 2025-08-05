@@ -1,0 +1,6 @@
+[workspace]
+resolver = "3"
+members = ["ayiou", "ayiou-provider"]
+
+[workspace.lints.rust]
+unsafe_code = "deny"
