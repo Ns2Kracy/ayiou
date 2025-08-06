@@ -1,6 +1,31 @@
 [workspace]
 resolver = "3"
-members = ["ayiou", "ayiou-provider"]
+members = [
+    "ayiou",
+    "ayiou-core",
+    "ayiou-extra",
+    "ayiou-macros",
+    "ayiou-provider",
+]
 
-[workspace.lints.rust]
-unsafe_code = "deny"
+
+[profile.dev]
+opt-level = 1
+debug = true
+rpath = false
+lto = false
+debug-assertions = true
+codegen-units = 256
+incremental = true
+panic = "unwind"
+
+[profile.release]
+opt-level = 3
+debug = false
+rpath = false
+lto = "fat"
+debug-assertions = false
+codegen-units = 1
+incremental = false
+panic = "abort"
+strip = true
