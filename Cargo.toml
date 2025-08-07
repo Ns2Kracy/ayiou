@@ -9,6 +9,10 @@ members = [
 ]
 
 [workspace.dependencies]
+tokio = { version = "1.47.1", features = ["full"] }
+tracing = { version = "0.1.41" }
+tracing-subscriber = { version = "0.3.19" }
+tracing-appender = { version = "0.2.3" }
 
 [profile.dev]
 opt-level = 1

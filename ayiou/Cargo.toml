@@ -5,3 +5,6 @@ edition = "2024"
 
 [dependencies]
 clap = { version = "4.5.42", features = ["derive"] }
+axum = { version = "0.8.4", features = ["multipart", "ws"] }
+axum-extra = { version = "0.10.1", features = ["multipart", "typed-header"] }
+mimalloc = "0.1.47"
