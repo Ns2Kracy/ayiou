@@ -8,6 +8,7 @@ members = [
     "ayiou-provider",
 ]
 
+[workspace.dependencies]
 
 [profile.dev]
 opt-level = 1
