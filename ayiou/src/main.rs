@@ -12,7 +12,9 @@ static GLOBAL: MiMalloc = MiMalloc;
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
-    tracing_subscriber::registry().with(fmt::layer()).try_init()?;
+    tracing_subscriber::registry()
+        .with(fmt::layer())
+        .try_init()?;
 
     cli::run().await
 }
