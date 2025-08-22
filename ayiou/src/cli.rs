@@ -18,13 +18,13 @@ pub struct Cli {
 
 #[derive(Subcommand, Debug)]
 pub enum Commands {
-    Version(commands::version::Version),
+    Server(commands::server::Server),
 }
 
 pub async fn run() -> anyhow::Result<()> {
     let cmd = Cli::parse();
 
     match cmd.command {
-        Commands::Version(cmd) => cmd.run().await,
+        Commands::Server(cmd) => cmd.run().await,
     }
 }
