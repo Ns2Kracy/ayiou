@@ -14,7 +14,12 @@ tracing = { version = "0.1.41" }
 tracing-subscriber = { version = "0.3.19" }
 tracing-appender = { version = "0.2.3" }
 serde = { version = "1.0.210", features = ["derive"] }
-serde_json = "1.0.132"
+serde_json = "1.0.143"
+anyhow = "1.0.99"
+thiserror = "2.0.16"
+async-trait = "0.1.87"
+chrono = { version = "0.4.41", features = ["serde"] }
+fuser = { version = "0.15.1", features = ["serializable", "macfuse-4-compat"] }
 
 [profile.dev]
 opt-level = 1
