@@ -1,3 +1,6 @@
+pub mod local;
+pub mod s3;
+
 use std::io::{Read, Write};
 use std::path::Path;
 
