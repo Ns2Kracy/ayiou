@@ -1,14 +1,5 @@
-use mimalloc::MiMalloc;
+use ayiou::cli;
 use tracing_subscriber::{fmt, layer::SubscriberExt, util::SubscriberInitExt};
-
-mod api;
-mod cli;
-mod commands;
-mod server;
-mod shutdown;
-
-#[global_allocator]
-static GLOBAL: MiMalloc = MiMalloc;
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
